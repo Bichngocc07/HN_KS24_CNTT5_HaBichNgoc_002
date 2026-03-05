@@ -11,6 +11,7 @@ public class Câu_1 {
             System.out.println("Số lượng không hợp lệ");
             return;
         }
+        List<Integer> list = new ArrayList<>();
         Set<Integer> set = new HashSet<>();
 
         for (int i = 0; i < n; i++) {
@@ -19,3 +20,4 @@ public class Câu_1 {
         }
     }
 }
+
