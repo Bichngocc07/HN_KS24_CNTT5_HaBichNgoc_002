@@ -1,38 +1,21 @@
-import java.util.Scanner;
+import java.util.*;
 
 public class Câu_1 {
-
-    static boolean isLetterAZ(char c){
-        return c>='a' && c<='z';
-    }
-
     public static void main(String[] args) {
 
         Scanner sc = new Scanner(System.in);
-        System.out.println("Nhập kí tự :");
-        String s = sc.nextLine().toLowerCase();
 
-        int[] count = new int[26];
+        int n = sc.nextInt();
 
-        for(int i=0;i<s.length();i++){
-            char c = s.charAt(i);
-            if(isLetterAZ(c))
-                count[c-'a']++;
+        if (n <= 0) {
+            System.out.println("Số lượng không hợp lệ");
+            return;
         }
+        Set<Integer> set = new HashSet<>();
 
-        int max=0;
-        char result=' ';
-
-        for(int i=0;i<s.length();i++){
-            char c=s.charAt(i);
-            if(isLetterAZ(c)){
-                if(count[c-'a']>max){
-                    max=count[c-'a'];
-                    result=c;
-                }
-            }
+        for (int i = 0; i < n; i++) {
+            int x = sc.nextInt();
+            set.add(x);
         }
-
-        System.out.println(result+" (xuat hien "+max+" lan)");
     }
 }
